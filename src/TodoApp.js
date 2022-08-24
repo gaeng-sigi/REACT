@@ -13,6 +13,8 @@ export default function TodoApp() {
     // todo 값을 console에 찍는다.
     const onSubmit = (e) => {
         e.preventDefault();
+        if (todo === '') { return; }
+        setTodoList(preVal => [ todo, ...preVal]);
         console.log(todo);
         setTodo("");
     };
@@ -29,14 +31,28 @@ export default function TodoApp() {
         <div>
             <h1>My Todo List</h1>
             <form onSubmit={onSubmit}>
-                <input
+            <input
                 type="text"
                 placeholder="Write your to do..."
                 value={todo}
                 onChange={onChange}
-                />
-                <button>Add To do</button>
+            />
+            <button>Add To do</button>
             </form>
+            <ul>
+                {todoList.map((item, idx) => (<li key={idx}>{item}</li>))}
+            </ul>
+            <ul>
+                {todoList.map((item, idx) => (<li key={idx}>{item}</li>))}
+            </ul>
+            <ul>
+                {todoList}
+            </ul>
+            <ul>
+                {todoList.map((item, idx) => {
+                    return (<div key={idx}>{item}</div>)
+                })}
+            </ul>
         </div>
     );
 }

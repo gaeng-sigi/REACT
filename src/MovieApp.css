@@ -1,0 +1,11 @@
+*{ padding: 0; margin:0;}
+body { background-color: rgb(39, 39, 39); color:white;}
+a{ color: white; text-decoration: none;}
+a:hover { color:gold; transition: 0.5s;}
+li { list-style: none;}
+
+.movieList > ul {text-align: center;}
+.movieList > ul > li { margin-bottom: 80px;}
+.summary { background-color: rgba(128, 128, 128, 0.200); padding: 25px 20px; width: 780px; margin: 25px auto; }
+.genresList { display:inline-block; }
+.genresList > li { float: left; background-color: gold; padding: 3px 7px; border-radius: 3px; margin: 3px; font-weight: 600;}
